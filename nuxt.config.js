@@ -22,6 +22,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    "~/plugins/axios-fakestore.js" //Register the custom plugin
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -39,10 +40,6 @@ export default {
   axios: {
     baseURL: "https://jsonplaceholder.typicode.com" //Default API URL
   },
-
-  plugins: [
-    "~/plugins/axios-fakestore.js" //Register the custom plugin
-  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

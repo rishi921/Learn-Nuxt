@@ -14,12 +14,13 @@ export const getters = {
 
 export const actions = {
     async fetchProducts({ commit }) {
-        const products = await this.$.fakestoreApi.$get('/products')
-        commit('setProducts', products)
+        try {
+            const products = await this.$fakestoreApi.$get('/products')
+            commit('setProducts', products)
+        } catch (error) {
+            console.log(error)
+            // Handle error here (e.g., toast notification)
+            return Promise.reject(error)
+        }
     }
-}
-catch (error) {
-    console.log(error)
-    // Handle error here (e.g., toast notification)
-    return Promise.reject(error)
 }
