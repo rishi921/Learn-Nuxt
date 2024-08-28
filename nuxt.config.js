@@ -37,8 +37,12 @@ export default {
   ],
   //Axios Module Configuration
   axios: {
-    baseURL: "https://jsonplaceholder.typicode.com/posts" //Default API URL
+    baseURL: "https://jsonplaceholder.typicode.com" //Default API URL
   },
+
+  plugins: [
+    "~/plugins/axios-fakestore.js" //Register the custom plugin
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
