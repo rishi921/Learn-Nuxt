@@ -33,7 +33,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios'
   ],
+  //Axios Module Configuration
+  axios: {
+    baseURL: "https://jsonplaceholder.typicode.com/posts" //Default API URL
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
